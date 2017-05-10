@@ -12,7 +12,33 @@
 		457653791EC2ADB200BD08A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457653771EC2ADB200BD08A1 /* Main.storyboard */; };
 		4576537B1EC2ADB200BD08A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4576537A1EC2ADB200BD08A1 /* Assets.xcassets */; };
 		4576537E1EC2ADB200BD08A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4576537C1EC2ADB200BD08A1 /* LaunchScreen.storyboard */; };
+		4576538C1EC2ADD700BD08A1 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576538B1EC2ADD700BD08A1 /* KeyboardViewController.swift */; };
+		457653901EC2ADD700BD08A1 /* CNKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 457653891EC2ADD700BD08A1 /* CNKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4576538E1EC2ADD700BD08A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 457653681EC2ADB200BD08A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 457653881EC2ADD700BD08A1;
+			remoteInfo = CNKeyboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		457653941EC2ADD700BD08A1 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				457653901EC2ADD700BD08A1 /* CNKeyboard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		457653701EC2ADB200BD08A1 /* ChuckNorris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChuckNorris.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,10 +48,20 @@
 		4576537A1EC2ADB200BD08A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4576537D1EC2ADB200BD08A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4576537F1EC2ADB200BD08A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		457653891EC2ADD700BD08A1 /* CNKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CNKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4576538B1EC2ADD700BD08A1 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		4576538D1EC2ADD700BD08A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4576536D1EC2ADB200BD08A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		457653861EC2ADD700BD08A1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				457653721EC2ADB200BD08A1 /* ChuckNorris */,
+				4576538A1EC2ADD700BD08A1 /* CNKeyboard */,
 				457653711EC2ADB200BD08A1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				457653701EC2ADB200BD08A1 /* ChuckNorris.app */,
+				457653891EC2ADD700BD08A1 /* CNKeyboard.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,6 +102,15 @@
 			path = ChuckNorris;
 			sourceTree = "<group>";
 		};
+		4576538A1EC2ADD700BD08A1 /* CNKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				4576538B1EC2ADD700BD08A1 /* KeyboardViewController.swift */,
+				4576538D1EC2ADD700BD08A1 /* Info.plist */,
+			);
+			path = CNKeyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,15 +121,34 @@
 				4576536C1EC2ADB200BD08A1 /* Sources */,
 				4576536D1EC2ADB200BD08A1 /* Frameworks */,
 				4576536E1EC2ADB200BD08A1 /* Resources */,
+				457653941EC2ADD700BD08A1 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4576538F1EC2ADD700BD08A1 /* PBXTargetDependency */,
 			);
 			name = ChuckNorris;
 			productName = ChuckNorris;
 			productReference = 457653701EC2ADB200BD08A1 /* ChuckNorris.app */;
 			productType = "com.apple.product-type.application";
+		};
+		457653881EC2ADD700BD08A1 /* CNKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 457653911EC2ADD700BD08A1 /* Build configuration list for PBXNativeTarget "CNKeyboard" */;
+			buildPhases = (
+				457653851EC2ADD700BD08A1 /* Sources */,
+				457653861EC2ADD700BD08A1 /* Frameworks */,
+				457653871EC2ADD700BD08A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CNKeyboard;
+			productName = CNKeyboard;
+			productReference = 457653891EC2ADD700BD08A1 /* CNKeyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -95,6 +161,11 @@
 				ORGANIZATIONNAME = "Erica Millado";
 				TargetAttributes = {
 					4576536F1EC2ADB200BD08A1 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = ZG53357D46;
+						ProvisioningStyle = Automatic;
+					};
+					457653881EC2ADD700BD08A1 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = ZG53357D46;
 						ProvisioningStyle = Automatic;
@@ -115,6 +186,7 @@
 			projectRoot = "";
 			targets = (
 				4576536F1EC2ADB200BD08A1 /* ChuckNorris */,
+				457653881EC2ADD700BD08A1 /* CNKeyboard */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +202,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		457653871EC2ADD700BD08A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -142,7 +221,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		457653851EC2ADD700BD08A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4576538C1EC2ADD700BD08A1 /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4576538F1EC2ADD700BD08A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 457653881EC2ADD700BD08A1 /* CNKeyboard */;
+			targetProxy = 4576538E1EC2ADD700BD08A1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		457653771EC2ADB200BD08A1 /* Main.storyboard */ = {
@@ -262,6 +357,7 @@
 		457653831EC2ADB200BD08A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZG53357D46;
 				INFOPLIST_FILE = ChuckNorris/Info.plist;
@@ -275,12 +371,39 @@
 		457653841EC2ADB200BD08A1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZG53357D46;
 				INFOPLIST_FILE = ChuckNorris/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yayitserica.ChuckNorris;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		457653921EC2ADD700BD08A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = ZG53357D46;
+				INFOPLIST_FILE = CNKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yayitserica.ChuckNorris.CNKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		457653931EC2ADD700BD08A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = ZG53357D46;
+				INFOPLIST_FILE = CNKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yayitserica.ChuckNorris.CNKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -302,6 +425,14 @@
 			buildConfigurations = (
 				457653831EC2ADB200BD08A1 /* Debug */,
 				457653841EC2ADB200BD08A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		457653911EC2ADD700BD08A1 /* Build configuration list for PBXNativeTarget "CNKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				457653921EC2ADD700BD08A1 /* Debug */,
+				457653931EC2ADD700BD08A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
